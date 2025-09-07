@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANIMAL MERGE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Carátula -->
+  <section class="caratula">
+    <div>
+      <h1>ANIMAL MERGE</h1>
+      <button onclick="entrar()">Empezar</button>
+    </div>
+  </section>
+
+  <!-- Sección de Animales -->
+  <section id="animales" class="animales">
+    <h2>Animales de Tingana</h2>
+    <div class="animal-container">
+
+      <div class="animal-card">
+        <img src="images/mono-tocon.jpg" alt="Mono Tocón de San Martín">
+        <h3>Mono Tocón</h3>
+        <p>Pequeño primate endémico de la Amazonía peruana.</p>
+      </div>
+
+      <div class="animal-card">
+        <img src="images/ronsoco.jpg" alt="Ronsoco">
+        <h3>Ronsoco</h3>
+        <p>El roedor más grande del mundo, habita en humedales.</p>
+      </div>
+
+      <div class="animal-card">
+        <img src="images/martin-pescador.jpg" alt="Martín Pescador">
+        <h3>Martín Pescador</h3>
+        <p>Ave colorida experta en pescar en ríos amazónicos.</p>
+      </div>
+
+      <div class="animal-card">
+        <img src="images/mono-ardilla.jpg" alt="Mono Ardilla">
+        <h3>Mono Ardilla</h3>
+        <p>Primate pequeño y ágil que vive en grupos grandes.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
