@@ -9,7 +9,7 @@ body {
 /* Carátula */
 .caratula {
   height: 100vh;
-  background: url('[![caratula.png](https://i.postimg.cc/Y9887wyb/caratula.png)](https://postimg.cc/BLL25R3K)') no-repeat center center/cover;
+  background: url('https://i.postimg.cc/Y9887wyb/caratula.png') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
