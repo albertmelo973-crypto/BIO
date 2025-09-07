@@ -1,0 +1,93 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* Carátula */
+.caratula {
+  height: 100vh;
+  background: url('images/caratula.png') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.caratula h1 {
+  color: #4CAF50;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px black;
+}
+
+.caratula button {
+  padding: 15px 30px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.caratula button:hover {
+  background: #388E3C;
+}
+
+/* Sección de animales */
+.animales {
+  padding: 40px 20px;
+  text-align: center;
+  background: white;
+}
+
+.animales h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #4CAF50;
+}
+
+/* Contenedor */
+.animal-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Tarjetas */
+.animal-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  width: 220px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.animal-card:hover {
+  transform: scale(1.05);
+}
+
+.animal-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.animal-card h3 {
+  margin-top: 10px;
+  color: #333;
+}
+
+.animal-card p {
+  font-size: 14px;
+  color: #555;
+}
