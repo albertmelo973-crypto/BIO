@@ -1,8 +1,9 @@
+/* Fuente moderna */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #ffffff;
-  color: #333;
+  background: #111;
+  color: white;
   text-align: center;
 }
 
@@ -13,28 +14,18 @@ body {
 /* Carátula */
 #caratula {
   height: 100vh;
+  background: url('https://i.postimg.cc/Y9887wyb/caratula.png') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("https://i.postimg.cc/3wwJyYJP/Story-instagram-dia-da-natureza-ousado-preto-1.png") no-repeat center center/cover;
-  cursor: pointer;
-  position: relative;
-}
-
-#caratula .overlay {
   text-align: center;
-}
-
-#caratula img {
-  max-width: 200px;
+  cursor: pointer;
 }
 
 .tap-text {
-  margin-top: 20px;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: white;
-  text-shadow: 0 0 8px black;
+  font-size: 42px;
+  color: #4CAF50;
+  text-shadow: 2px 2px 5px black;
   animation: blink 1.5s infinite;
 }
 
@@ -42,95 +33,109 @@ body {
   50% { opacity: 0.6; }
 }
 
-/* Main */
-#main h1 {
-  color: green;
-  margin: 20px;
-  font-size: 2rem;
+/* Sección Animales */
+.animales {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 
-.animal-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 25px;
-  padding: 20px;
+.animales h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #4CAF50;
 }
 
+/* Contenedor de tarjetas */
+.animal-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Tarjeta estilo cubo 3D */
 .animal-card {
-  background: linear-gradient(145deg, #ffffff, #f0f0f0);
-  border-radius: 15px;
-  padding: 15px;
-  box-shadow: 6px 6px 12px #d1d1d1,
-              -6px -6px 12px #ffffff;
-  cursor: pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
   perspective: 1000px;
 }
 
-.animal-card img {
+.card-content {
+  width: 220px;
+  height: 250px;
+  background: #1c1c1c;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+
+.animal-card:hover .card-content {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+}
+
+.card-content img {
   width: 100%;
-  height: 120px;
+  height: 150px;
   object-fit: cover;
+}
+
+.card-content h3 {
+  margin: 15px 0;
+  color: #4CAF50;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  animation: fadeIn 0.5s ease;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
   border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-content h3 {
+  color: #4CAF50;
   margin-bottom: 10px;
 }
 
-.animal-card p {
-  font-weight: 600;
-  margin: 0;
-}
-
-.animal-card:hover {
-  transform: rotateY(8deg) scale(1.08);
-  box-shadow: 8px 8px 16px #c1c1c1,
-              -8px -8px 16px #ffffff;
-}
-
-/* Detalle del animal */
-#animalDetail {
-  padding: 20px;
-  max-width: 700px;
-  margin: auto;
-}
-
-#animalDetail h2 {
-  font-size: 2rem;
-  color: #2e7d32;
-  margin-bottom: 5px;
-}
-
-#animalDetail h3 {
-  font-size: 1.2rem;
-  font-style: italic;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-#animalDetail img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-#animalDetail p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.modal-content p {
+  font-size: 16px;
+  color: #ddd;
   text-align: justify;
+  line-height: 1.5;
 }
 
-#backBtn {
-  background: green;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 10px;
+.close {
+  position: absolute;
+  top: 20px; right: 30px;
+  font-size: 30px;
   cursor: pointer;
-  margin-bottom: 15px;
+  color: white;
 }
 
-#backBtn:hover {
-  background: darkgreen;
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
 }
