@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ANIMAL MERGE</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -21,32 +22,46 @@
     <h2>Animales de Tingana</h2>
     <div class="animal-container">
 
-      <div class="animal-card">
-        <img src="images/mono-tocon.jpg" alt="Mono Tocón de San Martín">
-        <h3>Mono Tocón</h3>
-        <p>Pequeño primate endémico de la Amazonía peruana.</p>
+      <div class="animal-card" onclick="mostrarInfo('mono-tocon')">
+        <div class="card-content">
+          <img src="https://i.postimg.cc/Y9g9yN0f/image.png" alt="Mono Tocón">
+          <h3>Mono Tocón</h3>
+        </div>
       </div>
 
-      <div class="animal-card">
-        <img src="images/ronsoco.jpg" alt="Ronsoco">
-        <h3>Ronsoco</h3>
-        <p>El roedor más grande del mundo, habita en humedales.</p>
+      <div class="animal-card" onclick="mostrarInfo('ronsoco')">
+        <div class="card-content">
+          <img src="https://i.postimg.cc/rpg7Wj4Z/image.png" alt="Ronsoco">
+          <h3>Ronsoco</h3>
+        </div>
       </div>
 
-      <div class="animal-card">
-        <img src="images/martin-pescador.jpg" alt="Martín Pescador">
-        <h3>Martín Pescador</h3>
-        <p>Ave colorida experta en pescar en ríos amazónicos.</p>
+      <div class="animal-card" onclick="mostrarInfo('martin-pescador')">
+        <div class="card-content">
+          <img src="https://i.postimg.cc/6pZvybkw/image.png" alt="Martín Pescador">
+          <h3>Martín Pescador</h3>
+        </div>
       </div>
 
-      <div class="animal-card">
-        <img src="images/mono-ardilla.jpg" alt="Mono Ardilla">
-        <h3>Mono Ardilla</h3>
-        <p>Primate pequeño y ágil que vive en grupos grandes.</p>
+      <div class="animal-card" onclick="mostrarInfo('mono-ardilla')">
+        <div class="card-content">
+          <img src="https://i.postimg.cc/DykWRPWM/image.png" alt="Mono Ardilla">
+          <h3>Mono Ardilla</h3>
+        </div>
       </div>
 
     </div>
   </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <img id="modal-img" src="" alt="">
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
