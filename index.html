@@ -3,47 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ADECARAM - TINGANA</title>
+  <title>ANIMAL - MERGE</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Carátula -->
   <section id="caratula">
     <div class="overlay">
-      <img src="https://i.postimg.cc/3wwJyYJP/Story-instagram-dia-da-natureza-ousado-preto-1.png" alt="Carátula">
-      <p class="tap-text">TOCA PARA EMPEZAR</p>
+      <h1 class="tap-text">TOCA PARA EMPEZAR</h1>
     </div>
   </section>
 
   <!-- Menú principal -->
   <main id="main" class="hidden">
-    <h1>ANIMAL - MERGE</h1>
-    <div class="animal-grid">
-      <div class="animal-card" onclick="showAnimal('tocón')">
-        <img src="https://i.postimg.cc/Y9g9yN0f/image.png" alt="Mono Tocón">
-        <p>Mono Tocón</p>
+    <section class="animales">
+      <h2>ANIMALES</h2>
+      <div class="animal-container">
+        <div class="animal-card" onclick="showAnimal('tocón')">
+          <div class="card-content">
+            <img src="https://i.postimg.cc/Y9g9yN0f/image.png" alt="Mono Tocón">
+            <h3>Mono Tocón</h3>
+          </div>
+        </div>
+        <div class="animal-card" onclick="showAnimal('ronsoco')">
+          <div class="card-content">
+            <img src="https://i.postimg.cc/rpg7Wj4Z/image.png" alt="Ronsoco">
+            <h3>Ronsoco</h3>
+          </div>
+        </div>
+        <div class="animal-card" onclick="showAnimal('pescador')">
+          <div class="card-content">
+            <img src="https://i.postimg.cc/6pZvybkw/image.png" alt="Martín Pescador">
+            <h3>Martín Pescador</h3>
+          </div>
+        </div>
+        <div class="animal-card" onclick="showAnimal('ardilla')">
+          <div class="card-content">
+            <img src="https://i.postimg.cc/DykWRPWM/image.png" alt="Mono Ardilla">
+            <h3>Mono Ardilla</h3>
+          </div>
+        </div>
       </div>
-      <div class="animal-card" onclick="showAnimal('ronsoco')">
-        <img src="https://i.postimg.cc/rpg7Wj4Z/image.png" alt="Ronsoco">
-        <p>Ronsoco</p>
-      </div>
-      <div class="animal-card" onclick="showAnimal('pescador')">
-        <img src="https://i.postimg.cc/6pZvybkw/image.png" alt="Martín Pescador">
-        <p>Martín Pescador</p>
-      </div>
-      <div class="animal-card" onclick="showAnimal('ardilla')">
-        <img src="https://i.postimg.cc/DykWRPWM/image.png" alt="Mono Ardilla">
-        <p>Mono Ardilla</p>
-      </div>
-    </div>
+    </section>
   </main>
 
-  <!-- Detalle del animal -->
-  <section id="animalDetail" class="hidden">
-    <button id="backBtn" onclick="goBack()">Volver</button>
-    <div id="animalContent"></div>
-  </section>
+  <!-- Modal de detalle -->
+  <div id="animalModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="animalContent"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
